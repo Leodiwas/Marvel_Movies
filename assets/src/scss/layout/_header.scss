@@ -122,7 +122,7 @@ header {
 
             svg {
               position: absolute;
-              top: 1rem;
+              top: 0.8rem;
               left: 0.8rem;
               z-index: 20;
             }
@@ -206,6 +206,10 @@ header {
 
         /* THIS creates the animation! */
         transition: transform 3s ease;
+
+        @include m.respond(mobile) {
+          transition: transform 6s ease;
+        }
 
         img {
           /* Only for images that have different size than slide */
