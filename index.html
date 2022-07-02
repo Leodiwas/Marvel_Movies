@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Leo_MARVEL</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+    <!-- Css -->
+    <link rel="stylesheet" href="./dist/style.css" />
+    <!-- Js -->
+    <script type="module" defer src="./assets/src/js/controller.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <!-- navbar -->
+        <nav class="nav">
+          <!-- nav logo -->
+          <h2 class="nav__logo">Leo<span>Marvel</span></h2>
+          <div class="nb">
+            <!-- navbar__left -->
+            <div class="nb__l">
+              <!-- Nav Toggler -->
+              <div class="nb__l-toggler">
+                <div class="btn__toggle navTogg-not-active">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <ul class="nb__l-links">
+                <li><a class="nav-text" href="#">Home</a></li>
+                <li><a class="nav-text" href="#">Movies</a></li>
+                <li><a class="nav-text" href="#">Shows</a></li>
+                <li>
+                  <a class="nav-text" href="#"
+                    >Pages
+                    <svg>
+                      <use
+                        href="./assets/icon/arrow_down.svg#arrow__down"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- navbar__right -->
+            <div class="nb__r">
+              <div class="nb__r-search">
+                <svg class="nb__r-icon nb__r-search-icon">
+                  <use href="./assets/icon/search.svg#search"></use>
+                </svg>
+                <div class="search__label">
+                  <svg>
+                    <use href="./assets/icon/search.svg#search"></use>
+                  </svg>
+                  <input
+                    type="text"
+                    autofocus
+                    name="search"
+                    placeholder="Enter Movie Name"
+                    class="search__Input input-text"
+                  />
+                </div>
+              </div>
+              <svg class="nb__r-icon">
+                <use
+                  href="./assets/icon/bell.svg#bell
+              "
+                ></use>
+              </svg>
+              <svg class="nb__r-icon setting">
+                <use href="./assets/icon/setting.svg#setting"></use>
+              </svg>
+              <svg class="nb__r-icon">
+                <use href="./assets/icon/user.svg#user"></use>
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero -->
+      <section class="h">
+        <div class="h__slider">
+          <div class="slide slide__1">
+            <img
+              src="./assets/images/wallpaper_1.jpg"
+              alt="slideImg__1"
+              class="img__responsive"
+            />
+          </div>
+          <div class="slide slide__2">
+            <img
+              src="./assets/images/wallpaper_2.jpg"
+              alt="slideImg__2"
+              class="img__responsive"
+            />
+          </div>
+          <div class="slide slide__3">
+            <img
+              src="./assets/images/wallpaper_3.jpg"
+              alt="slideImg__3"
+              class="img__responsive"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="h__about">
+            <h5 class="h__origin">New</h5>
+            <h1 class="hero__title">THOR</h1>
+            <span class="h__category">
+              <h6>2021</h6>
+              <h6 class="active">18+</h6>
+              <h6>2hr 20m</h6>
+            </span>
+            <p class="h__description">
+              In Norse Mythology, Thor is also the God of Thunder, and, like in
+              the MCU, he carries a powerful weapon in his hammer, Mjöllnir.
+            </p>
+            <div class="h__btns">
+              <button class="btn btn-text">Play Now</button>
+              <button class="btn btn-text">+ My List</button>
+            </div>
+          </div>
+        </div>
+        <button class="slide__btn slide__btn-left">
+          <svg class="">
+            <use href="./assets/icon/arrow__left.svg#arrow__left"></use>
+          </svg>
+        </button>
+        <button class="slide__btn slide__btn-right">
+          <svg>
+            <use href="./assets/icon/arrow__right.svg#arrow__right"></use>
+          </svg>
+        </button>
+      </section>
+    </header>
+    <main class="main">
+      <div class="container"></div>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>

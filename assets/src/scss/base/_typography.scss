@@ -1,0 +1,131 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+.caption,
+.label,
+.btn-text,
+.nav-text {
+  font-style: normal;
+  font-weight: bold;
+  color: v.$color-white;
+}
+
+.label {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  @include m.respond(mobile) {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: 14.8rem;
+
+  @include m.respond(tablet) {
+    font-size: 8rem;
+  }
+
+  @include m.respond(mobile) {
+    font-size: 3.8rem;
+    line-height: 4.8rem;
+  }
+
+  @include m.respond(mobile-xs) {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+}
+h2 {
+  font-size: 3.8rem;
+  line-height: 4.6rem;
+
+  @include m.respond(mobile) {
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+  }
+}
+h3 {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+
+  @include m.respond(mobile) {
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+h4 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  @include m.respond(mobile) {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.9rem;
+  }
+}
+h5 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+
+  @include m.respond(mobile) {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 600;
+}
+
+.input-text {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: v.$color-white;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  @include m.respond(mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.nav-text {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+svg {
+  width: 3.2rem;
+  height: 2.2rem;
+  align-items: center;
+}
+
+a {
+  svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: 0.6rem;
+  }
+}
+
+svg#search,
+svg#bell,
+svg#setting,
+svg#user,
+path:hover {
+  fill: red;
+  transition: all 0.5s;
+}

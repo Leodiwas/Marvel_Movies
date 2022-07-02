@@ -1,0 +1,134 @@
+.navTogg-active span:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.navTogg-not-active span:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.navTogg-active span:nth-child(2) {
+  margin-top: 1.8rem;
+  animation: ease 0.7s scaled forwards;
+}
+
+.navTogg-not-active span:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.navTogg-active span:nth-child(3) {
+  margin-top: 1.8rem;
+  animation: ease 0.7s bottom forwards;
+}
+
+.navTogg-not-active span:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 2.2rem;
+    transform: rotate(0);
+  }
+  100% {
+    top: 2.2rem;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 2.2rem;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 2.2rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 2.2rem;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 2.2rem;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 2.2rem;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 2.2rem;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Setting rotate Animation
+
+svg#setting path {
+  transform-origin: center;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
