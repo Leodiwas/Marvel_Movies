@@ -43,3 +43,59 @@
     height: 4.2rem;
   }
 }
+
+.h__btns {
+  display: flex;
+  gap: 2rem;
+
+  button:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 2.2rem;
+    }
+  }
+}
+
+.card__tabs-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  .btn__tab {
+    width: 3.2rem;
+    height: 0.8rem;
+    background: v.$color-gray;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .btn__tab-active {
+    background: v.$color-red;
+  }
+}
+
+.playBtn {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: v.$color-red;
+  box-shadow: 0 0 2rem rgba(v.$color-black, 0.6);
+
+  svg {
+    width: 2.2rem;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+}

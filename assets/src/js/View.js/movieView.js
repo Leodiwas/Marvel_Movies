@@ -1,5 +1,6 @@
 class MovieView {
   _header = document.querySelector(".header");
+  _main = document.querySelector(".main");
   _input = document.querySelector(".search__Input");
 
   constructor() {
@@ -7,6 +8,7 @@ class MovieView {
     this._slider();
     this._toggleSearch();
     this._movieName();
+    this._cardActive();
   }
 
   _toggleSearchInput() {
@@ -38,9 +40,43 @@ class MovieView {
     this._input.addEventListener("keyup", (e) => {
       if (e.key === "Enter") {
         // handler(e.target.value);
-        // e.target.value = "";
+        e.target.value = "";
         this._toggleSearchInput();
       }
+    });
+  }
+
+  _cardActive() {
+    this._main.addEventListener("click", (e) => {
+      const btnClicked = e.target.closest(".btn__tab");
+      if (!btnClicked) return;
+
+      console.log(btnClicked);
+
+      // removing active class
+      document
+        .querySelectorAll(".btn__tab")
+        .forEach((t) => t.classList.remove("btn__tab-active"));
+
+      document
+        .querySelectorAll(".actor__cards")
+        .forEach((c) => c.classList.remove("actor__cards-active"));
+
+      // active tab
+      btnClicked.classList.add("btn__tab-active");
+
+      console.log(btnClicked.dataset.tab);
+
+      console.log(
+        document
+          .querySelector(`.actor__cards-${btnClicked.dataset.tab}`)
+          .classList.add("actor__cards-active")
+      );
+
+      // active tab area
+      document
+        .querySelector(`.actor__cards-${btnClicked.dataset.tab}`)
+        .classList.add("actor__cards-active");
     });
   }
 

@@ -45,10 +45,6 @@ a {
   text-decoration: none;
   color: initial;
   transition: all 0.5s ease;
-
-  &:hover {
-    color: v.$color-red;
-  }
 }
 
 ul {

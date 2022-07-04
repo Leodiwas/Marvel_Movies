@@ -80,9 +80,26 @@ header {
           }
 
           li {
-            a {
-              padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.2rem;
 
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 0.2rem;
+              width: 0%;
+              margin: auto;
+              transition: all 0.5s ease;
+              background: v.$color-red;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+
+            a {
               @include m.respond(mobile) {
                 padding: 0;
                 border-left: 0;
@@ -286,11 +303,6 @@ header {
 
     .h__description {
       margin-bottom: 2rem;
-    }
-
-    &__btns {
-      display: flex;
-      gap: 2rem;
     }
   }
 }

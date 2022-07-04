@@ -1,3 +1,96 @@
-.card{
-    
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.actor__cards {
+  position: relative;
+  height: 40rem;
+
+  display: none;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+
+  @include m.respond(mobile) {
+    height: auto;
+    flex-direction: column;
+  }
+
+  &:hover .card:not(:hover) {
+    transform: scale(0.9);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    perspective: 150rem;
+    --moz-perspective: 150rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s ease;
+    width: 22rem;
+    height: 30rem;
+
+    &:hover {
+      transform: scale(1.18);
+      z-index: 20;
+    }
+
+    &__side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      transition: all 1s ease;
+      overflow: hidden;
+      box-shadow: rgba(v.$color-black, 0.35) 0 0.5rem 1.5rem;
+      border-radius: 0.8rem;
+
+      img {
+        border-radius: 0.8rem;
+      }
+
+      &-back {
+        position: relative;
+        transform: rotateY(180deg);
+
+        @include m.respond(mobile) {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+
+    .card__name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0.2rem;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(v.$color-red, 0.6);
+      padding-block: 1.2rem;
+      width: 100%;
+
+      .animate__svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        animation: play 2s ease infinite;
+      }
+    }
+
+    &:hover .card__side-front {
+      transform: rotateY(180deg);
+    }
+
+    &:hover .card__side-back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.actor__cards-active {
+  display: flex !important;
 }

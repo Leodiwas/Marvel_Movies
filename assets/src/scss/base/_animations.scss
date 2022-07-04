@@ -1,3 +1,6 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
 .navTogg-active span:nth-child(1) {
   animation: ease 0.7s top forwards;
 }
@@ -130,5 +133,22 @@ svg#setting path {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+// Play animation
+
+@keyframes play {
+  0% {
+    transform: scale(0) translateX(0);
+  }
+  25% {
+    transform: scale(1) translateX(0.8rem);
+  }
+  50% {
+    transform: scale(1.4) translateX(1.6rem);
+  }
+  100% {
+    transform: scale(0) translateX(0);
   }
 }
