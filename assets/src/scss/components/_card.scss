@@ -3,7 +3,7 @@
 
 .actor__cards {
   position: relative;
-  height: 40rem;
+  height: 35rem;
 
   display: none;
   grid-template-rows: 40rem;
@@ -12,6 +12,7 @@
 
   justify-content: center;
   transition: all 0.5s ease;
+  margin-bottom: 6rem;
 
   &:hover .card:not(:hover) {
     transform: scale(0.9);
@@ -38,7 +39,7 @@
     position: relative;
     cursor: pointer;
     transition: all 1s ease;
-    width: 22rem;
+    width: 26rem;
     height: 30rem;
 
     &:hover {
