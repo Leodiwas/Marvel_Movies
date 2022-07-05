@@ -6,15 +6,12 @@
   height: 40rem;
 
   display: none;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
+  grid-template-rows: 40rem;
+  grid-template-columns: repeat(5, 26rem);
+  grid-gap: 3rem;
 
-  @include m.respond(mobile) {
-    height: auto;
-    flex-direction: column;
-  }
+  justify-content: center;
+  transition: all 0.5s ease;
 
   &:hover .card:not(:hover) {
     transform: scale(0.9);
@@ -22,6 +19,17 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @include m.respond(mobile) {
+    height: auto;
+    grid-template-rows: repeat(3, 23.6rem);
+    grid-template-columns: repeat(2, 18rem);
+    margin-bottom: 4rem;
+
+    &:hover .card:not(:hover) {
+      transform: scale(1);
+    }
   }
 
   .card {
@@ -36,6 +44,19 @@
     &:hover {
       transform: scale(1.18);
       z-index: 20;
+    }
+
+    @include m.respond(mobile) {
+      &:nth-child(5) {
+        margin-bottom: 4rem;
+      }
+
+      height: 23.2rem;
+      width: 17.2rem;
+
+      &:hover {
+        transform: scale(1);
+      }
     }
 
     &__side {
@@ -88,5 +109,5 @@
 }
 
 .actor__cards-active {
-  display: flex !important;
+  display: grid !important;
 }
