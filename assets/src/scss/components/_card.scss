@@ -3,11 +3,11 @@
 
 .actor__cards {
   position: relative;
-  height: 35rem;
+  height: 30rem;
 
   display: none;
-  grid-template-rows: 40rem;
-  grid-template-columns: repeat(5, 26rem);
+  grid-template-rows: 30rem;
+  grid-template-columns: repeat(5, 22rem);
   grid-gap: 3rem;
 
   justify-content: center;
@@ -39,7 +39,7 @@
     position: relative;
     cursor: pointer;
     transition: all 1s ease;
-    width: 26rem;
+    width: 22rem;
     height: 30rem;
 
     &:hover {
